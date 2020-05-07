@@ -23,15 +23,15 @@ The `cronPattern` is a normal [cron job pattern](https://crontab.guru/) giving y
 
 Supported values for platform are:
 
-| Platform | Required
-| --- | --- | --- |
-| `dropbox` | `secret` |
+* `dropbox`
 
 Below you can read more about how to configure each specific platform.
 
 ### Dropbox
 
-The Dropbox platform requires an access key to be configured as your `secret`. In order to generate one, follow these steps:
+*Required parameters: `secret`*
+
+In order to generate an access token, follow these steps:
 
 1. Visit [Dropbox Developers](https://www.dropbox.com/developers/apps/create)
 2. Choose the **Dropbox API**
