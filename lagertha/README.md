@@ -1,14 +1,14 @@
 # Lagertha
 
-Lagertha is a backup solution for Home Assistant. Backing up your data should not be complex or time consuming to setup, the concept is rather simple: *I want a fresh copy of my configuration to exist in X amount of places in case something goes wrong*. The purpose of this application is to create a simple solution that strikes a balance between:
+Lagertha is a backup solution for Home Assistant. Backing up your data is important, you dont want to loose countless hours spent on configuring your smart home. It should also be simple and quick. The purpose of this application is to create a solution that strikes a balance between:
 
-* **Do it yourself (DIY)** - You will probably need to create some access credentials for the platform you want to backup to. Seeing you are a Home Assistant user already, you are already used to this.
-* **Extensibility** - Want to backup to a platform that is not supported? Head over to our repository and request (or contribute yourself) a new platform. The heavy business logic is already done for you, it is as simple as implementing an interface with a few methods.
-* **Maintainability** - This addon will never be the "one solution fits all" and feature requests will be chosen with care to keep the addon easy to extend while still covering 90% of the use cases one may have regarding backup.
+* **Do it yourself (DIY)** - You will probably need to create some access credentials for the platform you want to backup to. Seeing you are a Home Assistant user already, this is a walk in the park!
+* **Extensibility** - Is your favourite platform not supported? Head over to our repository and contribute (or request) a new platform. The heavy business logic is already done for you, you will just need to implement an interface.
+* **Maintainability** - This addon will never be the "one solution fits all". Feature requests will be chosen with care to keep the addon easy to extend while still covering 90% of the backup use cases.
 
 ## Configuration
 
-By default, the minimum configuration has been set for you automatically in the configuration tab. You will only need to configure a platform in order to get up-and-running. The default configuration will look something like:
+The minimum configuration has been set for you automatically in the configuration tab. You will only need to configure a platform in order to get up-and-running. The default configuration will look something like:
 
 ```yml
 nBackups: 5
@@ -40,8 +40,6 @@ In order to generate an access token, follow these steps:
 5. Click **Generate** under **Generated access token** and copy the value to `secret`
 
 ### [Advanced] Full configuration
-
-Here are the full configuration:
 
 ```yml
 nBackups: 5
