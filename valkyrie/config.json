@@ -29,7 +29,7 @@
         "verbose": "bool?",
         "storages": [{
             "platform": "list(dropbox|awsS3)",
-            "host": "url?",
+            "host": "string?",
             "id": "str?",
             "secret": "str",
             "basePath": "str?"
