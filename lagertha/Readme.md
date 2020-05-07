@@ -11,6 +11,6 @@ nBackups: 5
 cronPattern: '* * * * *'
 storages:
   - platform: dropbox
-    secret: j9GOCFtwsY8AAAAAAAEXhKH78ztWKcoeAgi9AyBfSDbK7c5BD3aHA0JrqE6RtAJe
+    secret: my_secret
     basePath: /my/path
 ```
