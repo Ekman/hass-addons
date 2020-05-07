@@ -39,7 +39,7 @@ In order to generate an access token, follow these steps:
 4. Name your app anything you want
 5. Click **Generate** under **Generated access token** and copy the value to `secret`
 
-### [Advanced] Full configuration
+## [Advanced] Full configuration
 
 ```yml
 nBackups: 5
