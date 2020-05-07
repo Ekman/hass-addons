@@ -1,0 +1,33 @@
+{
+    "name": "Lagertha",
+    "version": "0.0.1",
+    "slug": "lagertha",
+    "description": "Backup solution for Home Assistant",
+    "stage": "experimental",
+    "arch": [
+        "armhf",
+        "armv7",
+        "aarch64",
+        "amd64",
+        "i386"
+    ],
+    "startup": "application",
+    "boot": "auto",
+    "hassio_role": "backup",
+    "homeassistant_api": true,
+    "options": {
+        "nBackups": 5,
+        "cronPattern": "@daily"
+    },
+    "schema": {
+        "nBackups": "int(1,)",
+        "cronPattern": "str(1,)",
+        "storages": [{
+            "platform": "list(dropbox)",
+            "host": "url?",
+            "id": "str(1,)?",
+            "secret": "str(1,)",
+            "basePath": "str(1,)?"
+        }]
+    }
+}
