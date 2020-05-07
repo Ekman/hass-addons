@@ -8,7 +8,8 @@ By default, the minimum configuration has been set for you automatically in the 
 
 ```yml
 nBackups: 5
-cronPattern: '* * * * *'
+cronPattern: '@daily'
+verbose: false
 storages:
   - platform: dropbox
     secret: my_secret

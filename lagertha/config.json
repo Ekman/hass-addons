@@ -26,6 +26,7 @@
     "schema": {
         "nBackups": "int(1,)",
         "cronPattern": "str",
+        "verbose": "bool?",
         "storages": [{
             "platform": "list(dropbox)",
             "host": "url?",
