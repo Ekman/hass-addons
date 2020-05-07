@@ -6,7 +6,7 @@ Backup solution for Home Assistant.
 
 By default, the minimum configuration has been set for you automatically in the configuration tab. However, here are the full configuration:
 
-```yaml
+```yml
 nBackups: 5
 cronPattern: '* * * * *'
 storages:
