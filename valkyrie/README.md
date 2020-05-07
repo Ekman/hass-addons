@@ -24,6 +24,7 @@ The `cronPattern` is a normal [cron job pattern](https://crontab.guru/) giving y
 Supported values for platform are:
 
 * `dropbox`
+* `awsS3`
 
 Below you can read more about how to configure each specific platform.
 
