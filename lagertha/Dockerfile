@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ENV LANG=C.UTF-8 \
     CONFIG_PATH="/data/options.json" \
     APP_USER="app" \
-    APP_PATH="/home/${APP_USER}/app.js" \
+    APP_PATH="/home/app/app.js" \
     APP_ENV="production" \
     NODE_ENV="production"
 
