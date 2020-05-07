@@ -1,0 +1,38 @@
+{
+    "name": "Valkyrie",
+    "version": "0.0.1",
+    "slug": "valkyrie",
+    "description": "Backup solution for Home Assistant",
+    "stage": "experimental",
+    "arch": [
+        "armhf",
+        "armv7",
+        "aarch64",
+        "amd64",
+        "i386"
+    ],
+    "startup": "application",
+    "boot": "auto",
+    "hassio_role": "backup",
+    "hassio_api": true,
+    "options": {
+        "nBackups": 5,
+        "cronPattern": "@daily",
+        "storages": [{
+            "platform": "dropbox",
+            "secret": "my_secret"
+        }]
+    },
+    "schema": {
+        "nBackups": "int(1,)",
+        "cronPattern": "str",
+        "verbose": "bool?",
+        "storages": [{
+            "platform": "list(dropbox|awsS3)",
+            "host": "url?",
+            "id": "str?",
+            "secret": "str",
+            "basePath": "str?"
+        }]
+    }
+}
