@@ -28,7 +28,7 @@ Supported values for platform are:
 
 Below you can read more about how to configure each specific platform.
 
-### Dropbox
+### Dropbox (dropbox)
 
 *Required parameters: `secret`*
 
@@ -40,7 +40,7 @@ In order to generate an access token, follow these steps:
 4. Name your app anything you want
 5. Click **Generate** under **Generated access token** and copy the value to `secret`
 
-### AWS S3
+### AWS S3 (awsS3)
 
 *Required parameters: `id`, `secret`, `host`*
 
