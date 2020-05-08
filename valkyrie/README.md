@@ -1,6 +1,6 @@
 # Valkyrie
 
-![Valkyrie icon](https://github.com/Ekman/valkyrie/blob/master/icon.png?raw=true)
+![Valkyrie icon](https://raw.githubusercontent.com/Ekman/hass-addons/master/valkyrie/icon.png)
 
 Valkyrie is a backup solution for Home Assistant. Backing up your data is important, you dont want to loose countless hours spent on configuring your smart home. It should also be simple and quick. The purpose of this application is to create a solution that strikes a balance between:
 
