@@ -40,15 +40,25 @@ In order to generate an access token, follow these steps:
 4. Name your app anything you want
 5. Click **Generate** under **Generated access token** and copy the value to `secret`
 
+The final platform should look like this:
+
+```yml
+platform: dropbox
+secret: accessToken
+```
+
 ### AWS S3 (awsS3)
 
 *Required parameters: `id`, `secret`, `host`*
 
 You will need to create an access key ID and secret access key, which you can [find information about here](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/). Then, configure your platform like this:
 
-* `id` = Access key ID
-* `secret` - Secret access key
-* `host` - Needs to contain both bucket and region, eg. `{bucket}@{region}`
+```yml
+platform: awsS3
+id: access_key_id
+secret: secret_access_key
+host: bucket@region
+```
 
 ## [Advanced] Full configuration
 
