@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CRON_PATTERN=$(cat ${CONFIG_PATH} | jq --raw-output .cronPattern)
+CRON_PATTERN=$(cat ${CONFIG_PATH} | jq --raw-output .cron_pattern)
 
 # Install the new crontab
 echo "${CRON_PATTERN} node ${APP_PATH} ${CONFIG_PATH}" | crontab -u ${APP_USER} -
