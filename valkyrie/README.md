@@ -2,7 +2,9 @@
 
 ![Valkyrie icon](https://raw.githubusercontent.com/Ekman/hass-addons/master/valkyrie/icon.png)
 
-Valkyrie is a backup solution for Home Assistant. Backing up your data is important, you dont want to loose countless hours spent on configuring your smart home. It should also be simple and quick. The purpose of this application is to create a solution that strikes a balance between:
+Valkyrie is a backup solution for Home Assistant. Backing up your data is important, you dont want to loose countless hours spent on configuring your smart home. It should also be simple and quick to get up-and-running.
+
+The purpose of this application is to create a solution that strikes a balance between:
 
 * **Do it yourself (DIY)** - You will probably need to create some access credentials for the platform you want to backup to. Seeing you are a Home Assistant user already, this is a walk in the park!
 * **Extensibility** - Is your favourite platform not supported? Head over to our repository and contribute (or request) a new platform. The heavy business logic is already done for you, you will just need to implement an interface.
@@ -13,20 +15,20 @@ Valkyrie is a backup solution for Home Assistant. Backing up your data is import
 The minimum configuration has been set for you automatically in the configuration tab. You will only need to configure a platform in order to get up-and-running. The default configuration will look something like:
 
 ```yml
-nBackups: 5
-cronPattern: '@daily'
+n_backups: 5
+cron_pattern: '@daily'
 storages:
   - platform: dropbox
     id: my_id
     secret: my_secret
 ```
 
-The `cronPattern` is a normal [cron job pattern](https://crontab.guru/) giving you endless possibilities on how to setup the backup schedule. 
+The `cron_pattern` is a normal [cron job pattern](https://crontab.guru/) giving you endless possibilities on how to setup the backup schedule. 
 
 Supported values for platform are:
 
 * `dropbox`
-* `awsS3`
+* `aws_s3`
 
 Below you can read more about how to configure each specific platform.
 
@@ -46,17 +48,17 @@ The final platform should look like this:
 
 ```yml
 platform: dropbox
-secret: accessToken
+secret: access_token
 ```
 
-### AWS S3 (awsS3)
+### AWS S3 (aws_s3)
 
 *Required parameters: `id`, `secret`, `host`*
 
 You will need to create an access key ID and secret access key, which you can [find information about here](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/). Then, configure your platform like this:
 
 ```yml
-platform: awsS3
+platform: aws_s3
 id: access_key_id
 secret: secret_access_key
 host: bucket@region
@@ -65,14 +67,14 @@ host: bucket@region
 ## [Advanced] Full configuration
 
 ```yml
-nBackups: 5
-cronPattern: '@daily'
+n_backups: 5
+cron_pattern: '@daily'
 verbose: false
-storages:
+destinations:
   - platform: dropbox
     id: my_id
     secret: my_secret
     host: my_host
-    basePath: /my/path
+    base_path: /my/path
 ```
 

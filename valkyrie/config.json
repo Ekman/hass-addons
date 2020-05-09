@@ -16,23 +16,23 @@
     "hassio_role": "backup",
     "hassio_api": true,
     "options": {
-        "nBackups": 5,
-        "cronPattern": "0 3 * * *",
-        "storages": [{
+        "n_backups": 5,
+        "cron_pattern": "0 3 * * *",
+        "destinations": [{
             "platform": "dropbox",
             "secret": "my_secret"
         }]
     },
     "schema": {
-        "nBackups": "int(1,)",
-        "cronPattern": "str",
+        "n_backups": "int(1,)",
+        "cron_pattern": "str",
         "verbose": "bool?",
-        "storages": [{
-            "platform": "list(dropbox|awsS3)",
+        "destinations": [{
+            "platform": "list(dropbox|aws_s3)",
             "host": "str?",
             "id": "str?",
             "secret": "str",
-            "basePath": "str?"
+            "base_path": "str?"
         }]
     }
 }
