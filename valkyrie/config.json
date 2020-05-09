@@ -17,7 +17,7 @@
     "hassio_api": true,
     "options": {
         "nBackups": 5,
-        "cronPattern": "@daily",
+        "cronPattern": "0 3 * * *",
         "storages": [{
             "platform": "dropbox",
             "secret": "my_secret"
