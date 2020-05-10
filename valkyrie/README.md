@@ -17,7 +17,7 @@ The minimum configuration has been set for you automatically in the configuratio
 ```yml
 n_backups: 5
 cron_pattern: '@daily'
-storages:
+destinations:
   - platform: dropbox
     id: my_id
     secret: my_secret
