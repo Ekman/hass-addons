@@ -1,8 +1,11 @@
 #!/bin/sh
 
-CRON_PATTERN=$(cat ${CONFIG_PATH} | jq --raw-output .cron_pattern)
+# Add Home Assistant as backup source
+cat ${CONFIG_PATH} | jq ".host=\"http://supervisor\" | .secret=\"${SUPERVISOR_TOKEN}\"" > "${CONFIG_PATH}.tmp"
+mv "${CONFIG_PATH}".tmp ${CONFIG_PATH}
 
 # Install the new crontab
+CRON_PATTERN=$(cat ${CONFIG_PATH} | jq --raw-output .cron_pattern)
 echo "${CRON_PATTERN} node ${APP_PATH} ${CONFIG_PATH}" | crontab -u ${APP_USER} -
 
 # See: https://stackoverflow.com/questions/37458287/how-to-run-a-cron-job-inside-a-docker-container
